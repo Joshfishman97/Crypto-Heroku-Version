@@ -11,6 +11,8 @@ import { Dashboard } from "./pages/Dashboard";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { SecurePage } from "./component/SecurePage";
+import { MarketPlace } from "./pages/MarketPlace";
+import { ContentPage } from "./pages/ContentPage";
 
 //create your first component
 const Layout = () => {

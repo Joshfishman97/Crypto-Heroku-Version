@@ -1,5 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import Column, Integer, DateTime
+import datetime
 db = SQLAlchemy()
 
 class User(db.Model):
@@ -22,32 +22,24 @@ class Articles(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     coin_id = db.Column(db.Integer, db.ForeignKey('coin.id'))
     coin = db.relationship("Coin")
-    #time_updated = db.Column(DateTime, default=datetime.datetime.utcnow)
-
-
-class CryptoPriceData(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    coin_id = db.Column(db.Integer, db.ForeignKey('coin.id'))
-    coin = db.relationship("Coin")
-    namecoin = db.Column(db.String(250), unique=True, nullable=False)
-    symbol = db.Column(db.String(250), unique=True, nullable=False)
-    market_cap_rank = db.Column(db.String(250), unique=True, nullable=False)
-    price_btc = db.Column(db.String(250), unique=True, nullable=False)
-    candlestickgraph = db.Column(db.String(250), unique=True, nullable=False)
-    #time_updated = db.(DateTime, default=datetime.datetime.utcnow)
+    time_updated = db.Column(db.DateTime(timezone=True), default=datetime.datetime.utcnow)
 
 
 class VideosOnCrypto(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     coin_id = db.Column(db.Integer, db.ForeignKey('coin.id'))
     coin = db.relationship("Coin")
-    #time_updated = db.Column(DateTime,default=datetime.datetime.utcnow)
+    time_updated = db.Column(db.DateTime(timezone=True), default=datetime.datetime.utcnow)
 
 
 
 class Coin(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    #time_updated = db.Column(DateTime, default=datetime.datetime.utcnow)
+    time_updated = db.Column(db.DateTime(timezone=True), default=datetime.datetime.utcnow)
+    namecoin = db.Column(db.String(250), unique=True, nullable=False)
+    symbol = db.Column(db.String(250), unique=True, nullable=False)
+    market_cap_rank = db.Column(db.Integer, unique=True, nullable=False)
+    coingecko_id = db.Column(db.String(250), unique=True, nullable=False)
 
 
 
