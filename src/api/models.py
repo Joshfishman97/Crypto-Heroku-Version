@@ -1,5 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
-
+from sqlalchemy import Column, Integer, DateTime
 db = SQLAlchemy()
 
 class User(db.Model):
@@ -22,7 +22,7 @@ class Articles(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     coin_id = db.Column(db.Integer, db.ForeignKey('coin.id'))
     coin = db.relationship("Coin")
-    timestamp = db.Column(db.Integer, datetime.datetime())
+    time_updated = db.Column(DateTime(timezone=True), onupdate=func.now())
 
 
 class CryptoPriceData(db.Model):
@@ -34,19 +34,21 @@ class CryptoPriceData(db.Model):
     market_cap_rank = db.Column(db.String(250), unique=True, nullable=False)
     price_btc = db.Column(db.String(250), unique=True, nullable=False)
     candlestickgraph = db.Column(db.String(250), unique=True, nullable=False)
-    timestamp = db.Column(db.Integer, datetime.datetime())
+    time_updated = db.Column(DateTime(timezone=True), onupdate=func.now())
 
 
 class VideosOnCrypto(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     coin_id = db.Column(db.Integer, db.ForeignKey('coin.id'))
     coin = db.relationship("Coin")
-    timestamp = db.Column(db.Integer, datetime.datetime())
+    time_updated = db.Column(DateTime(timezone=True), onupdate=func.now())
+
 
 
 class Coin(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    timestamp = db.Column(db.Integer, datetime.datetime())
+    time_updated = db.Column(DateTime(timezone=True), onupdate=func.now())
+
 
 
 
