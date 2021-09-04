@@ -22,7 +22,7 @@ class Articles(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     coin_id = db.Column(db.Integer, db.ForeignKey('coin.id'))
     coin = db.relationship("Coin")
-    time_updated = db.Column(DateTime(timezone=True), onupdate=func.now())
+    #time_updated = db.Column(DateTime, default=datetime.datetime.utcnow)
 
 
 class CryptoPriceData(db.Model):
@@ -34,21 +34,20 @@ class CryptoPriceData(db.Model):
     market_cap_rank = db.Column(db.String(250), unique=True, nullable=False)
     price_btc = db.Column(db.String(250), unique=True, nullable=False)
     candlestickgraph = db.Column(db.String(250), unique=True, nullable=False)
-    time_updated = db.Column(DateTime(timezone=True), onupdate=func.now())
+    #time_updated = db.(DateTime, default=datetime.datetime.utcnow)
 
 
 class VideosOnCrypto(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     coin_id = db.Column(db.Integer, db.ForeignKey('coin.id'))
     coin = db.relationship("Coin")
-    time_updated = db.Column(DateTime(timezone=True), onupdate=func.now())
+    #time_updated = db.Column(DateTime,default=datetime.datetime.utcnow)
 
 
 
 class Coin(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    time_updated = db.Column(DateTime(timezone=True), onupdate=func.now())
-
+    #time_updated = db.Column(DateTime, default=datetime.datetime.utcnow)
 
 
 
