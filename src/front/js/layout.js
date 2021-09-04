@@ -26,6 +26,18 @@ const Layout = () => {
 						<Route exact path="/">
 							<Home />
 						</Route>
+						<Route exact path="/markets">
+							<Home />
+						</Route>
+						<Route exact path="/videos">
+							<Home />
+						</Route>
+						<Route exact path="/research">
+							<Home />
+						</Route>
+						<Route exact path="/about">
+							<Home />
+						</Route>
 
 						<Route exact path="/register">
 							<RegisterUser />
