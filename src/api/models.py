@@ -17,3 +17,37 @@ class User(db.Model):
             "email": self.email,
             # do not serialize the password, its a security breach
         }
+
+class Articles(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    coin_id = db.Column(db.Integer, db.ForeignKey('coin.id'))
+    coin = db.relationship("Coin")
+    timestamp = db.Column(db.Integer, datetime.datetime())
+
+
+class CryptoPriceData(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    coin_id = db.Column(db.Integer, db.ForeignKey('coin.id'))
+    coin = db.relationship("Coin")
+    namecoin = db.Column(db.String(250), unique=True, nullable=False)
+    symbol = db.Column(db.String(250), unique=True, nullable=False)
+    market_cap_rank = db.Column(db.String(250), unique=True, nullable=False)
+    price_btc = db.Column(db.String(250), unique=True, nullable=False)
+    candlestickgraph = db.Column(db.String(250), unique=True, nullable=False)
+    timestamp = db.Column(db.Integer, datetime.datetime())
+
+
+class VideosOnCrypto(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    coin_id = db.Column(db.Integer, db.ForeignKey('coin.id'))
+    coin = db.relationship("Coin")
+    timestamp = db.Column(db.Integer, datetime.datetime())
+
+
+class Coin(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    timestamp = db.Column(db.Integer, datetime.datetime())
+
+
+
+    
