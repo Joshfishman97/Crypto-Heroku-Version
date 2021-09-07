@@ -13,6 +13,7 @@ import { Footer } from "./component/footer";
 import { SecurePage } from "./component/SecurePage";
 import { MarketPlace } from "./pages/MarketPlace";
 import { ContentPage } from "./pages/ContentPage";
+import { VideoPage } from "./pages/VideoPage";
 
 //create your first component
 const Layout = () => {
@@ -24,18 +25,19 @@ const Layout = () => {
 		<div className="d-flex flex-column h-100">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
+					<Navbar />
 					<Switch>
 						<Route exact path="/">
 							<Home />
 						</Route>
 						<Route exact path="/markets">
-							<Home />
+							<MarketPlace />
 						</Route>
 						<Route exact path="/videos">
-							<Home />
+							<VideoPage />
 						</Route>
 						<Route exact path="/research">
-							<Home />
+							<ContentPage />
 						</Route>
 						<Route exact path="/about">
 							<Home />

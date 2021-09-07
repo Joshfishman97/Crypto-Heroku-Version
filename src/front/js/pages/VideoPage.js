@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-export function MarketPlace() {
+export function VideoPage() {
 	const [market, setMarket] = useState([]);
 
 	// useEffect(() => {
