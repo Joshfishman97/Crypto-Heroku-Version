@@ -2,7 +2,7 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 from flask import Flask, request, jsonify, url_for, Blueprint
-from api.models import db, User
+from api.models import db, User,Articles,VideosOnCrypto,Coin
 # from flask_cors import CORS
 from api.utils import generate_sitemap, APIException
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
@@ -64,5 +64,29 @@ def userinfo():
     response_body = {
         "message": f"Hello {user.email} "
     }
+
+    return jsonify(response_body), 200
+
+
+@api.route('/coin', methods=['GET'])
+def coin():
+    coin_query = Coin.query.all()
+    response_body = [x.serialize() for x in coin_query]
+
+    return jsonify(response_body), 200
+
+
+@api.route('/videosoncrypto', methods=['GET'])
+def videosoncrypto():
+    videosoncrypto_query = VideosOnCrypto.query.all()
+    response_body = [x.serialize() for x in videosoncrypto_query]
+
+    return jsonify(response_body), 200
+
+
+@api.route('/articles', methods=['GET'])
+def articles():
+    articles_query = Articles.query.all()
+    response_body = [x.serialize() for x in articles_query]
 
     return jsonify(response_body), 200
