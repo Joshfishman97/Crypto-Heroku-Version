@@ -90,3 +90,7 @@ def articles():
     response_body = [x.serialize() for x in articles_query]
 
     return jsonify(response_body), 200
+
+ #r = requests.get('https://api.coingecko.com/api/v3/coins/btc')
+ #r = requests.get('https://api.coingecko.com/api/v3/coins/eth')
+
