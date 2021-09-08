@@ -12,5 +12,6 @@ export function ContentPage() {
 	// 		setMarket(data);
 	// 	})
 	// }, []);
+
 	return <div className="container" />;
 }
