@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export function VideoPage() {
 	const [market, setMarket] = useState([]);
@@ -12,5 +12,6 @@ export function VideoPage() {
 	// 		setMarket(data);
 	// 	})
 	// }, []);
+
 	return <div className="container" />;
 }
