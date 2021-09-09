@@ -7,6 +7,7 @@ from api.models import db, User,Articles,VideosOnCrypto,Coin
 from api.utils import generate_sitemap, APIException
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from argon2 import PasswordHasher
+import requests
 
 ph = PasswordHasher()
 api = Blueprint('api', __name__)
@@ -76,6 +77,13 @@ def coin():
     return jsonify(response_body), 200
 
 
+@api.route('/coin/<coin>', methods=['GET'])
+def single_coin(coin):
+    r = requests.get('https://api.coingecko.com/api/v3/coins/' + coin)
+    info = r.json()
+    return jsonify(info), 200
+
+
 @api.route('/videosoncrypto', methods=['GET'])
 def videosoncrypto():
     videosoncrypto_query = VideosOnCrypto.query.all()
@@ -90,7 +98,7 @@ def articles():
     response_body = [x.serialize() for x in articles_query]
 
     return jsonify(response_body), 200
-
+#r = requests.get('https://api.coingecko.com/api/v3/coins/btc')
  #r = requests.get('https://api.coingecko.com/api/v3/coins/btc')
  #r = requests.get('https://api.coingecko.com/api/v3/coins/eth')
 
