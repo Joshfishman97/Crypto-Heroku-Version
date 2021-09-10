@@ -1,7 +1,7 @@
 """
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
-from flask import Flask, request, jsonify, url_for, Blueprint
+from flask import Flask, request, jsonify, url_for, Blueprint, json
 from api.models import db, User,Articles,VideosOnCrypto,Coin
 # from flask_cors import CORS
 from api.utils import generate_sitemap, APIException
@@ -77,11 +77,13 @@ def coin():
     return jsonify(response_body), 200
 
 
-@api.route('/coin/<coin>', methods=['GET'])
+@api.route('/coin/<string:coin>', methods=['GET'])
 def single_coin(coin):
     r = requests.get('https://api.coingecko.com/api/v3/coins/' + coin)
     info = r.json()
     return jsonify(info), 200
+
+
 
 
 @api.route('/videosoncrypto', methods=['GET'])

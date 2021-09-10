@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 export function CoinPage() {
 	const [coins, setCoins] = useState([]);
@@ -32,6 +33,13 @@ export function CoinPage() {
 								<th scope="row">{coin.id}</th>
 								<td>{coin.namecoin}</td>
 								<td>{coin.symbol}</td>
+								<td>
+									{" "}
+									<Link to={"/coinpage/" + coin.namecoin}>
+										<span>Link to: {coin.namecoin}</span>
+									</Link>
+								</td>
+								{/* <td>{coin.market_data.current_price.usd}</td> */}
 							</tr>
 						);
 					})}
