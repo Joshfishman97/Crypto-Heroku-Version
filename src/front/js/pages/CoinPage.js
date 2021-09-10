@@ -31,31 +31,31 @@ export function CoinPage() {
                                 <th scope="row">{coin.id}</th>
                                 <td>{coin.namecoin}</td>
                                 <td>{coin.price}</td>
-                                <td>{coin.dailyvalue}</td>
+                                <td>{coin.usd_24th_change}</td>
                             </tr>
                             <tr>
                                 <th scope="row">{coin.id}</th>
                                 <td>{coin.namecoin}</td>
                                 <td>{coin.price}</td>
-                                <td>{coin.dailyvalue}</td>
+                                <td>{coin.usd_24th_change}</td>
                             </tr>
                             <tr>
                                 <th scope="row">{coin.id}</th>
                                 <td>{coin.namecoin}</td>
                                 <td>{coin.price}</td>
-                                <td>{coin.dailyvalue}</td>
+                                <td>{coin.usd_24th_change}</td>
                             </tr>
                             <tr>
                                 <th scope="row">{coin.id}</th>
                                 <td>{coin.namecoin}</td>
                                 <td>{coin.price}</td>
-                                <td>{coin.dailyvalue}</td>
+                                <td>{coin.usd_24th_change}</td>
                             </tr>
                             <tr>
                                 <th scope="row">{coin.id}</th>
                                 <td>{coin.namecoin}</td>
                                 <td>{coin.price}</td>
-                                <td>{coin.dailyvalue}</td>
+                                <td>{coin.usd_24th_change}</td>
                             </tr>
                         </tbody>
                     </table>
