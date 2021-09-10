@@ -20,6 +20,7 @@ export function CoinPage() {
 					<tr>
 						<th scope="col">#</th>
 						<th scope="col">Coin</th>
+						<th scope="col">symbol</th>
 						<th scope="col">Price</th>
 						<th scope="col">Daily Gain/Loss</th>
 					</tr>
@@ -28,10 +29,9 @@ export function CoinPage() {
 					{coins.map((coin, i) => {
 						return (
 							<tr key={i}>
-								<th scope="row">{coins.id}</th>
+								<th scope="row">{coin.id}</th>
 								<td>{coin.namecoin}</td>
-								<td>{coin.price}</td>
-								<td>{coin.usd_24th_change}</td>
+								<td>{coin.symbol}</td>
 							</tr>
 						);
 					})}
