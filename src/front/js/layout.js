@@ -43,21 +43,17 @@ const Layout = () => {
 						<Route exact path="/coinpage/:coin">
 							<CoinPage />
 						</Route>
-
 						<Route exact path="/register">
 							<RegisterUser />
 						</Route>
-
 						<Route exact path="/login">
 							<LoginUser />
 						</Route>
-
 						<Route exact path="/dashboard">
 							<SecurePage>
 								<Dashboard />
 							</SecurePage>
 						</Route>
-
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
