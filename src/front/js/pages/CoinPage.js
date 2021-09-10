@@ -27,8 +27,8 @@ export function CoinPage() {
 				<tbody>
 					{coins.map((coin, i) => {
 						return (
-							<tr>
-								<th scope="row">{coin.id}</th>
+							<tr key={i}>
+								<th scope="row">{coins.id}</th>
 								<td>{coin.namecoin}</td>
 								<td>{coin.price}</td>
 								<td>{coin.usd_24th_change}</td>
