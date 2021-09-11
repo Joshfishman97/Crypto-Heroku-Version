@@ -15,7 +15,7 @@ export const Home = () => {
 					src="https://res.cloudinary.com/djwr65ikt/image/upload/v1631231393/download_1_wbm3fn.jpg"
 					alt="First slide"
 				/>
-				<Link to="/coinpage/:coin">
+				<Link to="coinpage">
 					<Carousel.Caption>
 						<h5>Top 10 CryptoCoins</h5>
 					</Carousel.Caption>
