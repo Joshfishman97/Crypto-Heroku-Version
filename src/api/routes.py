@@ -83,6 +83,13 @@ def single_coin(coin):
     info = r.json()
     return jsonify(info), 200
 
+@api.route('/coin/<string:coin>', methods=['GET'])
+def graph_data(coin):
+    r = requests.get('https://api.coingecko.com/api/v3/coins/{coin.coingecko_id}/market_chart?vs_currency=usd&days=30&interval=daily')
+    info = r.json()
+    return jsonify(info), 200
+
+
 
 
 

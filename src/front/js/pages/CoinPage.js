@@ -22,8 +22,7 @@ export function CoinPage() {
 						<th scope="col">#</th>
 						<th scope="col">Coin</th>
 						<th scope="col">symbol</th>
-						<th scope="col">Price</th>
-						<th scope="col">Daily Gain/Loss</th>
+						<th scope="col">Link</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -35,7 +34,7 @@ export function CoinPage() {
 								<td>{coin.symbol}</td>
 								<td>
 									{" "}
-									<Link to={"/coinpage/" + coin.namecoin}>
+									<Link to={"/coinpage/" + coin.coingecko_id}>
 										<span>Link to: {coin.namecoin}</span>
 									</Link>
 								</td>
