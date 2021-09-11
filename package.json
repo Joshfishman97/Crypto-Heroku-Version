@@ -77,10 +77,12 @@
 	},
 	"dependencies": {
 		"bootstrap": "^4.3.1",
+		"chart.js": "^3.5.1",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
 		"react-bootstrap": "^1.6.3",
 		"react-dom": "^16.8.4",
+		"react-google-charts": "^3.0.15",
 		"react-polyfills": "0.0.1",
 		"react-router-dom": "^5.2.0"
 	}
