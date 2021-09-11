@@ -3,7 +3,18 @@ import { Link, useParams } from "react-router-dom";
 
 export function DetailsCoinPage() {
 	const [coin, setCoin] = useState(null);
+	const [graphdata, setGraphData] = useState(null);
 	const params = useParams();
+
+	useEffect(() => {
+		fetch(process.env.BACKEND_URL + `/api/coin/${params.id}/data`)
+			.then(res => {
+				return res.json();
+			})
+			.then(data => {
+				setGraphData(data);
+			});
+	}, []);
 
 	useEffect(() => {
 		fetch(process.env.BACKEND_URL + `/api/coin/${params.id}`)
