@@ -31,13 +31,13 @@ const Layout = () => {
 						<Route exact path="/">
 							<Home />
 						</Route>
-						{/* <Route exact path="/markets">
-							<MarketPlace />
+						<Route exact path="/research">
+							<Research />
 						</Route>
 						<Route exact path="/videos">
 							<VideoPage />
 						</Route>
-						<Route exact path="/research">
+						{/* <Route exact path="/research">
 							<ContentPage />
 						</Route> */}
 						<Route exact path="/coinpage">

@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 
-export function MarketPlace() {
+export function Research() {
 	const [market, setMarket] = useState([]);
+	const RSS_URL = `https://theconversation.com/us/topics/cryptocurrency-8321/articles.atom`;
 
 	useEffect(() => {
-		fetch("https://api.coingecko.com/api/v3/coins/eth")
+		fetch(RSS_URL)
 			.then(res => {
-				return res.json();
+				return res.text();
 			})
 			.then(data => {
 				setMarket(data);
 			});
 	}, []);
 
-	return <div className="container" />;
 }
