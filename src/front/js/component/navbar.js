@@ -18,8 +18,8 @@ export const Navbar = () => {
 			{/* BUTTONS TO PAGES */}
 
 			<div className="ml-auto">
-				<Link to="/markets">
-					<button className="btn navButton">Markets</button>
+				<Link to="/coinpage">
+					<button className="btn navButton">Coins</button>
 				</Link>
 				<Link to="/videos">
 					<button className="btn navButton">Videos</button>
