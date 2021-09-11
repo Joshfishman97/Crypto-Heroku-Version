@@ -12,7 +12,6 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { SecurePage } from "./component/SecurePage";
 import { MarketPlace } from "./pages/MarketPlace";
-import { ContentPage } from "./pages/ContentPage";
 import { VideoPage } from "./pages/VideoPage";
 import { CoinPage } from "./pages/CoinPage";
 import { DetailsCoinPage } from "./pages/DetailsCoinPage";
