@@ -32,7 +32,7 @@ const Layout = () => {
 						<Route exact path="/">
 							<Home />
 						</Route>
-						<Route exact path="/markets">
+						{/* <Route exact path="/markets">
 							<MarketPlace />
 						</Route>
 						<Route exact path="/videos">
@@ -40,11 +40,11 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/research">
 							<ContentPage />
-						</Route>
+						</Route> */}
 						<Route exact path="/coinpage">
 							<CoinPage />
 						</Route>
-						<Route exact path="/coinpage/:coin">
+						<Route exact path="/coinpage/:id">
 							<DetailsCoinPage />
 						</Route>
 						<Route exact path="/register">
