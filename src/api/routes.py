@@ -8,6 +8,7 @@ from api.utils import generate_sitemap, APIException
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from argon2 import PasswordHasher
 import requests
+import feedparser
 
 ph = PasswordHasher()
 api = Blueprint('api', __name__)
@@ -110,4 +111,11 @@ def articles():
 #r = requests.get('https://api.coingecko.com/api/v3/coins/btc')
  #r = requests.get('https://api.coingecko.com/api/v3/coins/btc')
  #r = requests.get('https://api.coingecko.com/api/v3/coins/eth')
+
+@api.route('/newsfeed', methods=['GET'])
+def newsrss():
+    newsfeed = feedparser.parse("https://theconversation.com/us/topics/cryptocurrency-8321/articles.atom")
+    entries = newsfeed.entries
+    
+    return jsonify(entries), 200
 

@@ -23,10 +23,10 @@ class Articles(db.Model):
     coin_id = db.Column(db.Integer, db.ForeignKey('coin.id'))
     coin = db.relationship("Coin")
     time_updated = db.Column(db.DateTime(timezone=True), default=datetime.datetime.utcnow)
-    # content: db.Column(db.Text)
-    # title: db.Column(db.String(250), unique=True, nullable=False)
-    # source: db.Column(db.String(250), unique=True, nullable=False)
-    # created_date: db.Column(db.String(250), unique=True, nullable=False)
+    content: db.Column(db.Text)
+    title: db.Column(db.String(250), unique=True, nullable=False)
+    source: db.Column(db.String(250), unique=True, nullable=False)
+    created_date: db.Column(db.String(250), unique=True, nullable=False)
 
     def __repr__(self):
         return '<Articles %r>' % self.id

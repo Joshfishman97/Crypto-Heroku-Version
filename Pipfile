@@ -20,6 +20,7 @@ flask-admin = "*"
 argon2-cffi = "*"
 flask-jwt-extended = "*"
 requests = "*"
+feedparser = "*"
 
 [requires]
 python_version = "3.8"
