@@ -3,7 +3,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			message: null,
 			authToken: null,
-			authError: null
+			authError: null,
+			news: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -72,6 +73,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(data => setStore({ authToken: data.token, authError: null }))
 					.catch(error => setStore({ authToken: null, authError: error }));
+			},
+			articleFeed: () => {
+				fetch("https://coinpaprika1.p.rapidapi.com/coins/btc-bitcoin/events", {
+					method: "GET",
+					headers: {
+						"x-rapidapi-host": "coinpaprika1.p.rapidapi.com",
+						"x-rapidapi-key": "323d9d599bmsh8b4bb4bc83add3cp1fb002jsn2ba4ee4ff602"
+					}
+				})
+					.then(response => {
+						return response.json();
+					})
+					.then(response => {
+						setStore({ news: response });
+					})
+					.catch(err => {
+						console.error(err);
+					});
 			}
 		}
 	};
