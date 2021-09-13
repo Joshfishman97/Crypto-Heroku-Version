@@ -11,10 +11,11 @@ import { Dashboard } from "./pages/Dashboard";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { SecurePage } from "./component/SecurePage";
-import { Research } from "./pages/Research";
+import { Research } from "./pages/Research.js";
 import { VideoPage } from "./pages/VideoPage";
 import { CoinPage } from "./pages/CoinPage";
 import { DetailsCoinPage } from "./pages/DetailsCoinPage";
+import { CoinArticle } from "./pages/CoinArticle";
 
 //create your first component
 const Layout = () => {
@@ -31,15 +32,15 @@ const Layout = () => {
 						<Route exact path="/">
 							<Home />
 						</Route>
-						<Route exact path="/research">
+						<Route exact path="/articles">
+							<CoinArticle />
+						</Route>
+						<Route exact path="/events">
 							<Research />
 						</Route>
 						<Route exact path="/videos">
 							<VideoPage />
 						</Route>
-						{/* <Route exact path="/research">
-							<ContentPage />
-						</Route> */}
 						<Route exact path="/coinpage">
 							<CoinPage />
 						</Route>

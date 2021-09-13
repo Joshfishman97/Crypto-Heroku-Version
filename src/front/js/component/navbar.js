@@ -21,11 +21,14 @@ export const Navbar = () => {
 				<Link to="/coinpage">
 					<button className="btn navButton">Coins</button>
 				</Link>
+				<Link to="/articles">
+					<button className="btn navButton">News</button>
+				</Link>
 				<Link to="/videos">
 					<button className="btn navButton">Videos</button>
 				</Link>
-				<Link to="/research/">
-					<button className="btn navButton">Research</button>
+				<Link to="/events/">
+					<button className="btn navButton">Events</button>
 				</Link>
 				<Link to="/login/">
 					<button className="btn navButton">Login</button>
