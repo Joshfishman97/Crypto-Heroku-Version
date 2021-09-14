@@ -14,9 +14,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			getMessage: () => {
 				// fetching data from the backend
-				fetch(process.env.BACKEND_URL + "/api/hello")
+				fetch(process.env.BACKEND_URL + "/api/newsfeed")
 					.then(resp => resp.json())
-					.then(data => setStore({ message: data.message }))
+					.then(data => setStore({ news: data }))
 					.catch(error => console.log("Error loading message from backend", error));
 			},
 			changeColor: (index, color) => {

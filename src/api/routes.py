@@ -3,7 +3,7 @@ This module takes care of starting the API Server, Loading the DB and Adding the
 """
 from flask import Flask, request, jsonify, url_for, Blueprint, json
 from api.models import db, User,Articles,VideosOnCrypto,Coin
-# from flask_cors import CORS
+from flask_cors import CORS
 from api.utils import generate_sitemap, APIException
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from argon2 import PasswordHasher
@@ -13,7 +13,7 @@ import feedparser
 ph = PasswordHasher()
 api = Blueprint('api', __name__)
 
-# CORS(api)
+CORS(api)
 
 
 @api.route('/hello', methods=['POST', 'GET'])
