@@ -40,7 +40,7 @@ export const Home = () => {
 					src="https://res.cloudinary.com/djwr65ikt/image/upload/v1631231411/cryptoLP_banner_3_jpg_hdg5tf.jpg"
 					alt="Third slide"
 				/>
-				<Link to="/research">
+				<Link to="/articles">
 					<Carousel.Caption>
 						<h5>Research the Market Activity</h5>
 					</Carousel.Caption>
