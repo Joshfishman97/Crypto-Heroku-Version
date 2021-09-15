@@ -11,15 +11,16 @@ export const CoinArticle = () => {
 				return (
 					<div key={position}>
 						{/* <img src={item.proof_image_link} /> */}
-						<h1>{item.title}</h1>
-						{item.content.map((content, index) => {
-							return (
-								<a key={index} href={content.base}>
-									Sign Up
-								</a>
-							);
-						})}
-						<p>{item.author}</p>
+						<h1>{item.title && item.title}</h1>
+						{item.content &&
+							item.content.map((content, index) => {
+								return (
+									<a key={index} href={content.base}>
+										Sign Up
+									</a>
+								);
+							})}
+						<p>{item.author && item.author}</p>
 					</div>
 				);
 			})}
