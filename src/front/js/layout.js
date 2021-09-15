@@ -11,7 +11,7 @@ import { Dashboard } from "./pages/Dashboard";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { SecurePage } from "./component/SecurePage";
-import { Research } from "./pages/Research.js";
+import { Event } from "./pages/Events.js";
 import { VideoPage } from "./pages/VideoPage";
 import { CoinPage } from "./pages/CoinPage";
 import { DetailsCoinPage } from "./pages/DetailsCoinPage";
@@ -36,7 +36,7 @@ const Layout = () => {
 							<CoinArticle />
 						</Route>
 						<Route exact path="/events">
-							<Research />
+							<Event />
 						</Route>
 						<Route exact path="/videos">
 							<VideoPage />
