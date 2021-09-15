@@ -7,6 +7,7 @@ from flask_cors import CORS
 from api.utils import generate_sitemap, APIException
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from argon2 import PasswordHasher
+from api.youtube import get_videos
 import requests
 import feedparser
 
@@ -118,4 +119,10 @@ def newsrss():
     entries = newsfeed.entries
     
     return jsonify(entries), 200
+
+@api.route('/youtubevideos', methods=['GET'])
+def handle_get_youtube_video():
+    videos = get_videos()
+    print(videos)
+    return jsonify(videos), 200
 

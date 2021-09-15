@@ -13,16 +13,16 @@ import googleapiclient.discovery
 import googleapiclient.errors
 
 scopes = ["https://www.googleapis.com/auth/youtube.readonly"]
-api_key = 'AIzaSyChmexz_f0Zq-j8mm71y-LyTDdjoYfLHtw'
+api_key = os.getenv("GOOGLE_API_KEY")
 
-def main():
+def get_videos():
     # Disable OAuthlib's HTTPS verification when running locally.
     # *DO NOT* leave this option enabled in production.
     os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
     api_service_name = "youtube"
     api_version = "v3"
-    client_secrets_file = "YOUR_CLIENT_SECRET_FILE.json"
+    client_secrets_file = "google_credentials.json"
 
     # Get credentials and create an API client
     flow = google_auth_oauthlib.flow.InstalledAppFlow.from_client_secrets_file(
@@ -37,3 +37,4 @@ def main():
     response = request.execute()
 
     print(response)
+    return(response)

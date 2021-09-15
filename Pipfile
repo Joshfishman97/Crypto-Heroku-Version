@@ -21,6 +21,8 @@ argon2-cffi = "*"
 flask-jwt-extended = "*"
 requests = "*"
 feedparser = "*"
+google-auth-oauthlib = "*"
+google-api-python-client = "*"
 
 [requires]
 python_version = "3.8"
