@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export function CoinPage() {
 	const [coins, setCoins] = useState([]);
+	const { store, actions } = useContext(Context);
 
 	useEffect(() => {
 		fetch(process.env.BACKEND_URL + "/api/coin")
@@ -26,7 +28,7 @@ export function CoinPage() {
 					</tr>
 				</thead>
 				<tbody>
-					{coins.map((coin, i) => {
+					{store.coins.map((coin, i) => {
 						return (
 							<tr key={i}>
 								<th scope="row">{coin.id}</th>

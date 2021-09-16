@@ -4,7 +4,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			message: null,
 			authToken: null,
 			authError: null,
-			news: []
+			news: [],
+			coins: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -100,9 +101,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 						"x-rapidapi-key": "323d9d599bmsh8b4bb4bc83add3cp1fb002jsn2ba4ee4ff602"
 					}
 				})
-					.then(response => {
-						console.log(response);
-					})
+					.then(response => response.json())
+					.then(response => setStore({ news: response }))
+					.catch(err => {
+						console.error(err);
+					});
+			},
+			getCoins: () => {
+				fetch(
+					"https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+				)
+					.then(response => response.json())
+					.then(response => setStore({ coins: response }))
 					.catch(err => {
 						console.error(err);
 					});

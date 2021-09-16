@@ -18,6 +18,28 @@ class User(db.Model):
             # do not serialize the password, its a security breach
         }
 
+class Coin(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    time_updated = db.Column(db.DateTime(timezone=True), default=datetime.datetime.utcnow)
+    namecoin = db.Column(db.String(250), unique=True, nullable=False)
+    symbol = db.Column(db.String(250), unique=True, nullable=False)
+    market_cap_rank = db.Column(db.Integer, unique=True, nullable=False)
+    coingecko_id = db.Column(db.String(250), unique=True, nullable=False)
+
+    def __repr__(self):
+        return '<Coin %r>' % self.id
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "namecoin": self.namecoin,
+            "time_updated": self.time_updated,
+            "symbol": self.symbol,
+            "market_cap_rank": self.market_cap_rank,
+            "coingecko_id": self.coingecko_id
+            # do not serialize the password, its a security breach
+        }
+
 class Articles(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     coin_id = db.Column(db.Integer, db.ForeignKey('coin.id'))
@@ -59,27 +81,7 @@ class VideosOnCrypto(db.Model):
 
 
 
-class Coin(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    time_updated = db.Column(db.DateTime(timezone=True), default=datetime.datetime.utcnow)
-    namecoin = db.Column(db.String(250), unique=True, nullable=False)
-    symbol = db.Column(db.String(250), unique=True, nullable=False)
-    market_cap_rank = db.Column(db.Integer, unique=True, nullable=False)
-    coingecko_id = db.Column(db.String(250), unique=True, nullable=False)
 
-    def __repr__(self):
-        return '<Coin %r>' % self.id
-
-    def serialize(self):
-        return {
-            "id": self.id,
-            "namecoin": self.namecoin,
-            "time_updated": self.time_updated,
-            "symbol": self.symbol,
-            "market_cap_rank": self.market_cap_rank,
-            "coingecko_id": self.coingecko_id
-            # do not serialize the password, its a security breach
-        }
 
 
 

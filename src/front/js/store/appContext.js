@@ -23,6 +23,7 @@ const injectContext = PassedComponent => {
 
 		useEffect(() => {
 			state.actions.articleFeed();
+			state.actions.getCoins();
 			state.actions.eventFeed();
 			/**
 			 * EDIT THIS!
