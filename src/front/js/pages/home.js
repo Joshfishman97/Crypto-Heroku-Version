@@ -12,7 +12,7 @@ export const Home = () => {
 			<Carousel.Item>
 				<img
 					className="d-block carouselImg"
-					src="https://res.cloudinary.com/djwr65ikt/image/upload/v1631231393/download_1_wbm3fn.jpg"
+					src="https://res.cloudinary.com/djwr65ikt/image/upload/v1631900911/crypto_rwy8sr.jpg"
 					alt="First slide"
 				/>
 				<Link to="coinpage">

@@ -9,21 +9,28 @@ img {
 }
 
 h1 {
-    color: white;
+    color: black;
 }
 
 nav {
     color: black;
+    background-color: black;
 }
 
 .carouselImg {
-    height: 80vh;
+    height: 70vh;
     width: 100%;
     object-fit: cover;
     overflow: hidden;
 }
 
 .navButton {
-    background-color: blue;
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+
+.footer {
+    background-color: black;
     color: white;
 }

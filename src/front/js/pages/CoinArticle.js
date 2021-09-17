@@ -1,6 +1,7 @@
 import React from "react";
 import { Context } from "../store/appContext";
 import { useContext } from "react";
+import "../../styles/home.scss";
 
 export const CoinArticle = () => {
 	const { store, actions } = useContext(Context);
@@ -11,12 +12,12 @@ export const CoinArticle = () => {
 				return (
 					<div key={position}>
 						{/* <img src={item.proof_image_link} /> */}
-						<h1>{item.title && item.title}</h1>
+						<h3>{item.title && item.title}</h3>
 						{item.content &&
 							item.content.map((content, index) => {
 								return (
 									<a key={index} href={content.base}>
-										Sign Up
+										Read Article
 									</a>
 								);
 							})}

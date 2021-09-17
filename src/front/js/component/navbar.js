@@ -9,7 +9,7 @@ export const Navbar = () => {
 	// const favorites = useContext(FavoriteContext);
 
 	return (
-		<nav className=" navbar navbar-primary mb-3">
+		<nav className="navbar navbar-primary mb-3">
 			<Link to="/">
 				<span className="d-flex justify-content-start navbar-brand mb-0 h1">
 					<img src="https://res.cloudinary.com/djwr65ikt/image/upload/v1631056485/images_wb4mx0.png" />
