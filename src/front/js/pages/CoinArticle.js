@@ -7,10 +7,10 @@ export const CoinArticle = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div>
+		<div className="container">
 			{store.news.map((item, position) => {
 				return (
-					<div key={position}>
+					<div className=" row my-5 border shadow rounded bg-light" key={position}>
 						{/* <img src={item.proof_image_link} /> */}
 						<h3>{item.title && item.title}</h3>
 						{item.content &&

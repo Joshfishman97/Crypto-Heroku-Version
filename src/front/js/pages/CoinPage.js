@@ -37,7 +37,9 @@ export function CoinPage() {
 								<td>
 									{" "}
 									<Link to={`/coinpage/${coin.id}`}>
-										<span>Link to: {coin.name}</span>
+										<button type="button" className="btn btn-info w-100">
+											Link to: {coin.name}
+										</button>
 									</Link>
 								</td>
 								{/* <td>{coin.market_data.current_price.usd}</td> */}

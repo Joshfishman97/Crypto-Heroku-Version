@@ -10,6 +10,9 @@ export function AboutUs() {
 					<a href="https://github.com/Joshfishman97">
 						<i className="fab fa-github-square" />
 					</a>
+					<a href="https://www.linkedin.com/in/josh-fishman-972054214/">
+						<i className="fab fa-linkedin 7x" />
+					</a>
 				</p>
 				<p>Stewart Green (GM DEEP)</p>
 				<p>Bio</p>
