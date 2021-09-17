@@ -3,19 +3,19 @@ import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export function CoinPage() {
-	const [coins, setCoins] = useState([]);
+	// const [coins, setCoins] = useState([]);
 	const { store, actions } = useContext(Context);
 
-	useEffect(() => {
-		fetch(process.env.BACKEND_URL + "/api/coin")
-			.then(res => {
-				return res.json();
-			})
-			.then(data => {
-				setCoins(data);
-			});
-	}, []);
-
+	// useEffect(() => {
+	// 	fetch(process.env.BACKEND_URL + "/api/coin")
+	// 		.then(res => {
+	// 			return res.json();
+	// 		})
+	// 		.then(data => {
+	// 			setCoins(data);
+	// 		});
+	// }, []);
+	console.log(store.coins);
 	return (
 		<div className="container">
 			<table className="table">
@@ -32,12 +32,12 @@ export function CoinPage() {
 						return (
 							<tr key={i}>
 								<th scope="row">{coin.id}</th>
-								<td>{coin.namecoin}</td>
+								<td>{coin.name}</td>
 								<td>{coin.symbol}</td>
 								<td>
 									{" "}
-									<Link to={"/coinpage/" + coin.coingecko_id}>
-										<span>Link to: {coin.namecoin}</span>
+									<Link to={`/coinpage/${coin.id}`}>
+										<span>Link to: {coin.name}</span>
 									</Link>
 								</td>
 								{/* <td>{coin.market_data.current_price.usd}</td> */}
