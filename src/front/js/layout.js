@@ -16,6 +16,7 @@ import { VideoPage } from "./pages/VideoPage";
 import { CoinPage } from "./pages/CoinPage";
 import { DetailsCoinPage } from "./pages/DetailsCoinPage";
 import { CoinArticle } from "./pages/CoinArticle";
+import { AboutUs } from "./pages/AboutUs";
 
 //create your first component
 const Layout = () => {
@@ -46,6 +47,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/coinpage/:id">
 							<DetailsCoinPage />
+						</Route>
+						<Route exact path="/aboutus">
+							<AboutUs />
 						</Route>
 						<Route exact path="/register">
 							<RegisterUser />
