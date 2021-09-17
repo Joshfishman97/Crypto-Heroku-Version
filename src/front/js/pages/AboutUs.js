@@ -1,10 +1,14 @@
 import React from "react";
 
 export function AboutUs() {
-	<div>
-		<h1>Josh Fishman</h1>
-		<p>Bio</p>
-		<h1>Stewart Green (GM DEEP)</h1>
-		<p>Bio</p>
-	</div>;
+	return (
+		<div className="container">
+			<div className="col-12">
+				<p>Josh Fishman</p>
+				<p>Bio</p>
+				<p>Stewart Green (GM DEEP)</p>
+				<p>Bio</p>
+			</div>
+		</div>
+	);
 }
