@@ -8,25 +8,25 @@ export function AboutUs() {
 				<p>Bio</p>
 				<p>
 					<a href="https://github.com/Joshfishman97">
-						<i className="fab fa-github-square" />
+						<i className="fab fa-github-square fa-3x" />
 					</a>
 					<a href="https://www.linkedin.com/in/josh-fishman-972054214/">
-						<i className="fab fa-linkedin 7x" />
+						<i className="fab fa-linkedin fa-3x" />
 					</a>
 				</p>
 				<p>Stewart Green (GM DEEP)</p>
 				<p>Bio</p>
 				<a href="https://www.linkedin.com/in/stewartgreengmdeep/">
-					<i className="fab fa-linkedin 7x" />
+					<i className="fab fa-linkedin fa-3x" />
 				</a>
 				<a href="https://github.com/GMDEEP">
-					<i className="fab fa-github-square" />
+					<i className="fab fa-github-square fa-3x" />
 				</a>
 				<a href="https://twitter.com/GMDeep_onGithub">
-					<i className="fab fa-twitter-square" />
+					<i className="fab fa-twitter-square fa-3x" />
 				</a>
 				<a href="https://www.hackerrank.com/stewartjgreen">
-					<i className="fab fa-hackerrank" />
+					<i className="fab fa-hackerrank fa-3x" />
 				</a>
 			</div>
 		</div>

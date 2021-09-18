@@ -9,6 +9,8 @@ export function DetailsCoinPage() {
 	const [graphdata, setGraphData] = useState(undefined);
 	const params = useParams();
 	const { store, actions } = useContext(Context);
+	// const parser = null;
+	// const doc = null;
 
 	useEffect(() => {
 		fetch(`https://api.coingecko.com/api/v3/coins/${params.id}/market_chart?vs_currency=usd&days=6&interval=daily`)
@@ -26,7 +28,6 @@ export function DetailsCoinPage() {
 			}
 		});
 	}, []);
-
 	useEffect(() => {
 		fetch(
 			`https://api.coingecko.com/api/v3/coins/${
@@ -40,10 +41,10 @@ export function DetailsCoinPage() {
 				setCoin(data);
 			});
 	}, []);
+
 	if (coin === null) {
 		return null;
 	}
-	console.log(coinDetail);
 	return (
 		<div>
 			<img src={coin.image.small} />
@@ -76,7 +77,15 @@ export function DetailsCoinPage() {
 						}}
 						rootProps={{ "data-testid": "1" }}
 					/>
-					{/* {coin.links} */}
+					<a href={coin.links.homepage[0]}>
+						<i className="fas fa-globe fa-3x" />
+					</a>
+					<a href={"https://twitter.com/" + coin.links.twitter_screen_name}>
+						<i className="fab fa-twitter-square fa-3x" />
+					</a>
+					<a href={"https://facebook.com/" + coin.links.facebook_username}>
+						<i className="fab fa-facebook-square fa-3x" />
+					</a>
 				</div>
 			) : (
 				<p>Loading</p>
