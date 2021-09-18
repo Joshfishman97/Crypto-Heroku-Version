@@ -77,8 +77,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			eventFeed: () => {
 				fetch("https://coinpaprika1.p.rapidapi.com/coins/btc-bitcoin/events", {
-					method: "GET"
-					
+					method: "GET",
+					headers: {
+						"x-rapidapi-host": "coinpaprika1.p.rapidapi.com",
+						"x-rapidapi-key": "41f5743512msh5f89d36d0732e81p13bd15jsnb6ac9e057a3e"
+					}
 				})
 					.then(response => {
 						return response.json();
@@ -92,8 +95,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			articleFeed: () => {
 				fetch("https://coinpaprika1.p.rapidapi.com/coins/btc-bitcoin/events", {
-					method: "GET"
-					
+					method: "GET",
+					headers: {
+						"x-rapidapi-host": "coinpaprika1.p.rapidapi.com",
+						"x-rapidapi-key": "41f5743512msh5f89d36d0732e81p13bd15jsnb6ac9e057a3e"
+					}
 				})
 					.then(response => response.json())
 					.then(response => setStore({ news: response }))
