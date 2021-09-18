@@ -47,8 +47,14 @@ export function DetailsCoinPage() {
 	}
 	return (
 		<div>
-			<img src={coin.image.small} />
-			{coin.name}
+			<div className="d-flex justify-content-center mt-3">
+				<img src={coin.image.small} />
+			</div>
+			<div className="d-flex justify-content-center mt-3">
+				<h2>
+					<b>{coin.name}</b>
+				</h2>
+			</div>
 			{coin.prices}
 			{graphdata !== undefined ? (
 				<div>
@@ -77,15 +83,17 @@ export function DetailsCoinPage() {
 						}}
 						rootProps={{ "data-testid": "1" }}
 					/>
-					<a href={coin.links.homepage[0]}>
-						<i className="fas fa-globe fa-3x" />
-					</a>
-					<a href={"https://twitter.com/" + coin.links.twitter_screen_name}>
-						<i className="fab fa-twitter-square fa-3x" />
-					</a>
-					<a href={"https://facebook.com/" + coin.links.facebook_username}>
-						<i className="fab fa-facebook-square fa-3x" />
-					</a>
+					<div className="d-flex justify-content-center">
+						<a href={coin.links.homepage[0]}>
+							<i className="fas fa-globe fa-3x mt-5 p-3" />
+						</a>
+						<a href={"https://twitter.com/" + coin.links.twitter_screen_name}>
+							<i className="fab fa-twitter-square fa-3x mt-5 p-3" />
+						</a>
+						<a href={"https://facebook.com/" + coin.links.facebook_username}>
+							<i className="fab fa-facebook-square fa-3x mt-5 p-3" />
+						</a>
+					</div>
 				</div>
 			) : (
 				<p>Loading</p>

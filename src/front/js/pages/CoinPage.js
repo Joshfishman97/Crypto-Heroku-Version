@@ -38,7 +38,7 @@ export function CoinPage() {
 									{" "}
 									<Link to={`/coinpage/${coin.id}`}>
 										<button type="button" className="btn btn-info w-100">
-											Link to: {coin.name}
+											{coin.name}
 										</button>
 									</Link>
 								</td>
