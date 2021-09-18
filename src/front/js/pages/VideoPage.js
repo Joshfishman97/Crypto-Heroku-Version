@@ -23,19 +23,22 @@ export function VideoPage() {
 					<iframe src="https://www.youtube.com/embed/kubGCSj5y3k" title="How Cryptocurrencies Work" />
 				</div>
 				<div className="ratio ratio-16x9">
-					<iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" />
+					<iframe src="https://www.youtube.com/embed/tXd9SC9xZw" title="Crypto's Next Big Thing" />
 				</div>
 				<div className="ratio ratio-16x9">
-					<iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" />
+					<iframe src="https://www.youtube.com/embed/Yb6825iv0Vk" title="How To Invest In Crypto" />
 				</div>
 				<div className="ratio ratio-16x9">
-					<iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" />
+					<iframe src="https://www.youtube.com/embed/PofnjS8KNHo" title="Why Bitcoin is gaining steam" />
 				</div>
 				<div className="ratio ratio-16x9">
-					<iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" />
+					<iframe
+						src="https://www.youtube.com/embed/sS3E2xKFVBk"
+						title="Earn Passive Income Through Crypto"
+					/>
 				</div>
 				<div className="ratio ratio-16x9">
-					<iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" />
+					<iframe src="https://www.youtube.com/embed/lToi8F4fS2M" title="Understanding Price Action" />
 				</div>
 				<div className="ratio ratio-16x9">
 					<iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" />
