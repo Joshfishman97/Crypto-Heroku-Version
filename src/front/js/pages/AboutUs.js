@@ -11,12 +11,14 @@ export function AboutUs() {
 				</p>
 				<p>Bio</p>
 				<p>
-					<a href="https://github.com/Joshfishman97">
-						<i className="fab fa-github-square fa-3x" />
-					</a>
-					<a href="https://www.linkedin.com/in/josh-fishman-972054214/">
-						<i className="fab fa-linkedin fa-3x" />
-					</a>
+					<div className="d-flex justify-content-center">
+						<a href="https://github.com/Joshfishman97">
+							<i className="fab fa-github-square fa-3x p-2" />
+						</a>
+						<a href="https://www.linkedin.com/in/josh-fishman-972054214/">
+							<i className="fab fa-linkedin fa-3x p-2" />
+						</a>
+					</div>
 				</p>
 				<p className="namestyle d-flex justify-content-center mt-5">
 					<h1>

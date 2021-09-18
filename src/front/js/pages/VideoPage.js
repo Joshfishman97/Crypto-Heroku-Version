@@ -23,7 +23,7 @@ export function VideoPage() {
 					<iframe src="https://www.youtube.com/embed/kubGCSj5y3k" title="How Cryptocurrencies Work" />
 				</div>
 				<div className="ratio ratio-16x9">
-					<iframe src="https://www.youtube.com/embed/tXd9SC9xZw" title="Crypto's Next Big Thing" />
+					<iframe src="https://www.youtube.com/embed/_tXd9SC9xZw" title="Crypto's Next Big Thing" />
 				</div>
 				<div className="ratio ratio-16x9">
 					<iframe src="https://www.youtube.com/embed/Yb6825iv0Vk" title="How To Invest In Crypto" />
@@ -38,22 +38,22 @@ export function VideoPage() {
 					/>
 				</div>
 				<div className="ratio ratio-16x9">
+					<iframe src="https://www.youtube.com/embed/8dAWgnmgcso" title="Cypto Mining Explanation" />
+				</div>
+				<div className="ratio ratio-16x9">
 					<iframe src="https://www.youtube.com/embed/lToi8F4fS2M" title="Understanding Price Action" />
 				</div>
 				<div className="ratio ratio-16x9">
-					<iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" />
+					<iframe src="https://www.youtube.com/embed/OvAEQhbuvMI" title="Michael Saylor Strategy" />
+				</div>
+				<div className="ratio ratio-16x9">
+					<iframe src="https://www.youtube.com/embed/97ufCT6lQcY" title="Future will be Decentralized" />
 				</div>
 				<div className="ratio ratio-16x9">
 					<iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" />
 				</div>
 				<div className="ratio ratio-16x9">
-					<iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" />
-				</div>
-				<div className="ratio ratio-16x9">
-					<iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" />
-				</div>
-				<div className="ratio ratio-16x9">
-					<iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" />
+					<iframe src="https://www.youtube.com/embed/lToi8F4fS2M" title="Understanding Price Action" />
 				</div>
 			</div>
 		</div>
