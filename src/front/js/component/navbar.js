@@ -9,10 +9,13 @@ export const Navbar = () => {
 	// const favorites = useContext(FavoriteContext);
 
 	return (
-		<nav className="navbar navbar-primary mb-3">
+		<nav className="navbar navbar-primary">
 			<Link to="/">
 				<span className="d-flex justify-content-start navbar-brand mb-0 h1">
-					<img src="https://res.cloudinary.com/djwr65ikt/image/upload/v1631056485/images_wb4mx0.png" />
+					<img
+						src="https://res.cloudinary.com/djwr65ikt/image/upload/v1631981587/bitcoin-matrix-sign-background-39604816_m26cvk.jpg"
+						className="rounded-circle"
+					/>
 				</span>
 			</Link>
 			{/* BUTTONS TO PAGES */}
