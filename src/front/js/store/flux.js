@@ -87,6 +87,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(response => {
+						console.log(process.env.BACKEND_URL);
 						setStore({ news: response });
 					})
 					.catch(err => {
