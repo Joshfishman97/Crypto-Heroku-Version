@@ -3,10 +3,10 @@ import { Context } from "../store/appContext";
 
 export const Event = () => {
 	const { store, actions } = useContext(Context);
-
+	console.log(store.events);
 	return (
 		<div className="container">
-			{store.news.map((item, position) => {
+			{store.events.map((item, position) => {
 				return (
 					<div className=" row my-5 border shadow rounded bg-light" key={position}>
 						<div className="col-3">

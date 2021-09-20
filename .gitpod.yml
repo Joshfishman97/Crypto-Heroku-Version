@@ -11,7 +11,7 @@ ports:
 tasks:
     - init: >
         (cp -n .env.example .env || true) && 
-        echo "" >> .env && echo "BACKEND_URL=https://3001-${GITPOD_WORKSPACE_URL:8}" >> .env && echo "API_KEY=41f5743512msh5f89d36d0732e81p13bd15jsnb6ac9e057a3e" >> .env
+        echo "" >> .env && echo "BACKEND_URL=https://3001-${GITPOD_WORKSPACE_URL:8}" >> .env 
         pipenv install &&
         psql -U gitpod -c 'CREATE DATABASE example;' &&
         psql -U gitpod -c 'CREATE EXTENSION unaccent;' -d example &&

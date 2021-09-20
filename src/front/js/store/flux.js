@@ -5,7 +5,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			authToken: null,
 			authError: null,
 			news: [],
-			coins: []
+			coins: [],
+			events: []
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -13,7 +14,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 
-			getMessage: () => {
+			getArticles: () => {
 				// fetching data from the backend
 				fetch(process.env.BACKEND_URL + "/api/newsfeed")
 					.then(resp => resp.json())
@@ -75,26 +76,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(data => setStore({ authToken: data.token, authError: null }))
 					.catch(error => setStore({ authToken: null, authError: error }));
 			},
-			eventFeed: () => {
-				fetch("https://coinpaprika1.p.rapidapi.com/coins/btc-bitcoin/events", {
-					method: "GET",
-					headers: {
-						"x-rapidapi-host": "coinpaprika1.p.rapidapi.com",
-						"x-rapidapi-key": process.env.API_KEY
-					}
-				})
-					.then(response => {
-						return response.json();
-					})
-					.then(response => {
-						console.log(process.env.BACKEND_URL);
-						setStore({ news: response });
-					})
-					.catch(err => {
-						console.error(err);
-					});
-			},
-			articleFeed: () => {
+
+			getEvents: () => {
 				fetch("https://coinpaprika1.p.rapidapi.com/coins/btc-bitcoin/events", {
 					method: "GET",
 					headers: {
@@ -103,7 +86,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					}
 				})
 					.then(response => response.json())
-					.then(response => setStore({ news: response }))
+					.then(response => setStore({ events: response }))
 					.catch(err => {
 						console.error(err);
 					});
