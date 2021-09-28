@@ -12,9 +12,14 @@ export const CoinArticle = () => {
 				return (
 					<div className=" row my-5 border shadow rounded bg-light" key={position}>
 						<img src={item.image_url} />
-						<h3>{item.title && item.title}</h3>
-						<p>{item.author && item.author}</p>
-						<a href={item.link}>Read Article</a>
+						<h3>{item.title}</h3>
+						<p>{item.text}</p>
+
+						<a className="mx-auto" href={item.news_url}>
+							<button type="button" className="btn btn-info ">
+								Read Article
+							</button>
+						</a>
 					</div>
 				);
 			})}
