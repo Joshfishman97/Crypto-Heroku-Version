@@ -16,10 +16,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			getArticles: () => {
 				// fetching data from the backend
-				fetch(process.env.BACKEND_URL + "/api/newsfeed")
-					.then(resp => resp.json())
-					.then(data => setStore({ news: data }))
-					.catch(error => console.log("Error loading message from backend", error));
+				fetch(
+					"https://cryptonews-api.com/api/v1/category?section=general&items=50&token=lmp5hdoobxyrr00byix5e7yngwyks5loxhkwdy9f"
+				)
+					.then(response => response.json())
+					.then(response => setStore({ news: response.data }))
+					.catch(err => {
+						console.error(err);
+					});
 			},
 			changeColor: (index, color) => {
 				//get the store
@@ -78,15 +82,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			getEvents: () => {
-				fetch("https://coinpaprika1.p.rapidapi.com/coins/btc-bitcoin/events", {
+				fetch("https://coingecko.p.rapidapi.com/events", {
 					method: "GET",
 					headers: {
-						"x-rapidapi-host": "coinpaprika1.p.rapidapi.com",
-						"x-rapidapi-key": process.env.API_KEY
+						"x-rapidapi-host": "coingecko.p.rapidapi.com",
+						"x-rapidapi-key": "41f5743512msh5f89d36d0732e81p13bd15jsnb6ac9e057a3e"
 					}
 				})
 					.then(response => response.json())
-					.then(response => setStore({ events: response }))
+					.then(response => setStore({ events: response.data }))
 					.catch(err => {
 						console.error(err);
 					});
