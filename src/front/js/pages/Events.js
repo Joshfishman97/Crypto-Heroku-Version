@@ -22,11 +22,13 @@ export const Event = () => {
 								<h2>{item.name}</h2>
 								<p>{item.date}</p>
 								<p>{item.description}</p>
-								<a className="mx-auto" href={item.website}>
-									<button type="button" className="btn btn-info w-25 ">
-										Read Article
-									</button>
-								</a>
+								<div className="d-flex align-items-center">
+									<a className="mx-auto" href={item.website}>
+										<button type="button" className="button btn-info ">
+											Read Article
+										</button>
+									</a>
+								</div>
 								{/* <span>
 									{item.start_date}
 									{item.end_date}

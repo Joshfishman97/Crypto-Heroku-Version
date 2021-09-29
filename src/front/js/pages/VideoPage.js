@@ -40,20 +40,12 @@ export function VideoPage() {
 				<div className="ratio ratio-16x9">
 					<iframe src="https://www.youtube.com/embed/8dAWgnmgcso" title="Cypto Mining Explanation" />
 				</div>
-				<div className="ratio ratio-16x9">
-					<iframe src="https://www.youtube.com/embed/lToi8F4fS2M" title="Understanding Price Action" />
-				</div>
+
 				<div className="ratio ratio-16x9">
 					<iframe src="https://www.youtube.com/embed/OvAEQhbuvMI" title="Michael Saylor Strategy" />
 				</div>
 				<div className="ratio ratio-16x9">
 					<iframe src="https://www.youtube.com/embed/97ufCT6lQcY" title="Future will be Decentralized" />
-				</div>
-				<div className="ratio ratio-16x9">
-					<iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" />
-				</div>
-				<div className="ratio ratio-16x9">
-					<iframe src="https://www.youtube.com/embed/lToi8F4fS2M" title="Understanding Price Action" />
 				</div>
 			</div>
 		</div>
