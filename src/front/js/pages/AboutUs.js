@@ -9,7 +9,11 @@ export function AboutUs() {
 						<b>Josh Fishman</b>
 					</h1>
 				</p>
-				<p>Bio</p>
+				<p>
+					Josh Fishman is a full stack developer, who is interested in backend coding. Josh Fishman has
+					learned many languages and frameworks such as HTML, CSS, JavaScript, React, Python, Rest API, SQL,
+					MySQL, and SQLAlchemy. Ideally, he would like to work a job doing backend coding.
+				</p>
 				<p>
 					<div className="d-flex justify-content-center">
 						<a href="https://github.com/Joshfishman97">
