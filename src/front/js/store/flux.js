@@ -16,9 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			getArticles: () => {
 				// fetching data from the backend
-				fetch(
-					"https://cryptonews-api.com/api/v1/category?section=general&items=50&token=lmp5hdoobxyrr00byix5e7yngwyks5loxhkwdy9f"
-				)
+				fetch(`https://cryptonews-api.com/api/v1/category?section=general&items=50&token=${process.env.TOKEN}`)
 					.then(response => response.json())
 					.then(response => setStore({ news: response.data }))
 					.catch(err => {
