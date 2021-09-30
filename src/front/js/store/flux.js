@@ -84,7 +84,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					method: "GET",
 					headers: {
 						"x-rapidapi-host": "coingecko.p.rapidapi.com",
-						"x-rapidapi-key": "41f5743512msh5f89d36d0732e81p13bd15jsnb6ac9e057a3e"
+						"x-rapidapi-key": `${process.env.API_KEY_EVENTS}`
 					}
 				})
 					.then(response => response.json())
