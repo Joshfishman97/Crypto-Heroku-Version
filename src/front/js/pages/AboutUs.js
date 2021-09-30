@@ -32,12 +32,10 @@ export function AboutUs() {
 				<p>
 					Stewart Green is a full stack developer that is constantly learning and improving his skills to
 					become a well balance developer. Currently, he has learned multiple languages including HTML, CSS,
-					JavaScript, React, Python, Rest API, SQL. One of many goals, he has getting into the tech industry
-					is to learn and develop bots for stocks, futures, crypto, and forex markets. After starting work as
-					a junior developer and working on multiple projects over the next year. He plans on continuing his
-					journey in the field of Artificial Intelligence to develop his trading bots to another level.
-					Ideally, he would like to work within a company that will allow him to develop his skills and grow
-					in the fast-growing field of AI.{" "}
+					JavaScript, React, Python, Rest API, MySQL, SQLAlchemy. Moving foward Stewart is learning to develop
+					bots for stocks, futures, crypto, and forex markets. After starting work as a junior developer and
+					working on multiple projects over the next year. Ideally, he would like to work within a company
+					that will allow him to develop his skills and grow in the fast-growing field of AI.{" "}
 				</p>
 				<div className="d-flex justify-content-center">
 					<a href="https://www.linkedin.com/in/stewartgreengmdeep/">
