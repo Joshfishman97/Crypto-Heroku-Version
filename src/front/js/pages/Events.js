@@ -25,7 +25,7 @@ export const Event = () => {
 								<div className="d-flex align-items-center">
 									<a className="mx-auto" href={item.website}>
 										<button type="button" className="button btn-info ">
-											Read Article
+											More On The Event
 										</button>
 									</a>
 								</div>
