@@ -5,7 +5,8 @@ export const Footer = () => (
 	<footer className="footer mt-auto py-3 text-center">
 		<p>
 			Made with <i className="fa fa-heart text-danger" /> by{" "}
-			<a href="http://www.4geeksacademy.com">JoshFishman97 & GMDEEP </a>
+			<a href="https://github.com/Joshfishman97">JoshFishman97</a> {""}
+			<a href="https://github.com/GMDEEP">GMDEEP</a>
 		</p>
 	</footer>
 );
